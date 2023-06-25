@@ -1,0 +1,14 @@
+---
+title: "ggplot2 demo"
+author: "Joe J Collins"
+date: "5/22/2021"
+output:
+  quarto::html_document:
+    self_contained: true
+---
+
+Draw a graph.
+
+```{r}
+curve(x^2+5)
+```

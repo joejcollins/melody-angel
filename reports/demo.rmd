@@ -1,0 +1,27 @@
+---
+title: "My Graph Document"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# My Graph
+
+```{r my_graph, echo=FALSE}
+library(ggplot2)
+
+# Generate some example data
+data <- data.frame(
+  x = c(1, 2, 3, 4, 5),
+  y = c(10, 8, 6, 4, 2)
+)
+
+# Create a scatter plot using ggplot2
+ggplot(data, aes(x = x, y = y)) +
+  geom_point() +
+  labs(x = "X-axis", y = "Y-axis") +
+  ggtitle("My Scatter Plot")
+```
+
+The end
+

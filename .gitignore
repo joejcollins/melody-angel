@@ -450,3 +450,8 @@ vignettes/*.pdf
 
 # translation temp files
 po/*~
+
+# Ignore Quarto generated files
+*.html
+*.pdf
+reports/**/
