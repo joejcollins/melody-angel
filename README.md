@@ -1,6 +1,4 @@
-# Cultural Learnings of R
-
-## Make Benefit Glorious County of Shropshire 
+# R Learnings
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/joejcollins/melody-angel)
 
