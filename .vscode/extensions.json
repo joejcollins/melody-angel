@@ -1,7 +1,12 @@
 {
     "recommendations": [
-        "rust-lang.rust-analyzer",
-        "vadimcn.vscode-lldb",
-        "bungcip.better-toml"
+        "bungcip.better-toml",
+        "eamodio.gitlens",
+        "ms-python.python",
+        "ms-python.isort",
+        "RDebugger.r-debugger",
+        "reditorsupport.r",
+        "streetsidesoftware.code-spell-checker",
+        "sourcery.sourcery",
     ]
 }
