@@ -1,8 +1,4 @@
-FROM gitpod/workspace-full
+FROM rocker/rstudio:latest
 
-USER gitpod
-
-RUN sudo apt-get -q update \
- && sudo apt-get install -yq libpython3.6 rustc
-
-ENV RUST_LLDB=/usr/bin/lldb-8
+RUN sudo apt -q update \
+ && sudo apt install --assume-yes python3.10-venv

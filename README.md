@@ -1,4 +1,4 @@
-# Cultural Learnings of Rust 
+# Cultural Learnings of R
 
 ## Make Benefit Glorious County of Shropshire 
 
