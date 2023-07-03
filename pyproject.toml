@@ -19,6 +19,7 @@ classifiers = [
 dependencies = [
     "black",  # uncompromising Python code formatter.
     "debugpy",  # only required for debugging, not needed for production.
+    "flake8",  # linting for Python for VS Code to use.
     "mypy",  # optional static type checker for Python.
     "pip-tools", # used to manage requirements.txt.
     "pytest",  # used for testing, not needed for production.

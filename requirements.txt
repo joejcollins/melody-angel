@@ -18,8 +18,12 @@ debugpy==1.6.7
     # via melody-angel (pyproject.toml)
 exceptiongroup==1.1.1
     # via pytest
+flake8==6.0.0
+    # via melody-angel (pyproject.toml)
 iniconfig==2.0.0
     # via pytest
+mccabe==0.7.0
+    # via flake8
 mypy==1.4.0
     # via melody-angel (pyproject.toml)
 mypy-extensions==1.0.0
@@ -41,8 +45,12 @@ pluggy==1.2.0
     # via pytest
 prompt-toolkit==3.0.38
     # via radian
+pycodestyle==2.10.0
+    # via flake8
 pycparser==2.21
     # via cffi
+pyflakes==3.0.1
+    # via flake8
 pygments==2.15.1
     # via radian
 pyproject-hooks==1.0.0
