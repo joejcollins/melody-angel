@@ -4,6 +4,9 @@
     "words": [
         "abcdefghijklmnopqrstuvwxyz",
         "accesslog",
-        "gpxpy"
+        "gpxpy",
+        "latlon",
+        "osgridconverter",
+        "pydantic"
     ]
 }
