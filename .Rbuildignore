@@ -1,4 +1,9 @@
 ^LICENSE\.md$
+.R
 .venv
+.vscode
+melody_angel.egg-info\
+python_srd\
 ^.*\.Rproj$
 ^\.Rproj\.user$
+reports\.*[.](bib|bst|sty)$
