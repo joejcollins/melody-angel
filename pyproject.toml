@@ -17,14 +17,13 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
-    "black",
+    "black",  # uncompromising Python code formatter.
     "debugpy",  # only required for debugging, not needed for production.
-    "flake8",
-    "mypy",
+    "mypy",  # optional static type checker for Python.
     "pip-tools", # used to manage requirements.txt.
     "pytest",  # used for testing, not needed for production.
-    "radian",
-    "ruff"
+    "radian",  # enhances the experience of using R in VS Code.
+    "ruff"  # for fast linting of python.
 ]
 
 [project.urls]

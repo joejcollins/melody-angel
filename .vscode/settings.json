@@ -24,6 +24,7 @@
   "workbench.colorTheme": "Visual Studio Light",
   "python.defaultInterpreterPath": ".venv/bin/python",
   "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.scrollback": 100000,
   "r.bracketedPaste": true,
   "r.rterm.linux": ".venv/bin/radian"
 }

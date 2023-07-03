@@ -9,10 +9,10 @@ install.packages(c(
     "here",
     "highr",
     "htmltools",
-    "httpgd",
+    "httpgd",  # Enhances the experience of using R in VS Code.
     "jsonlite",
     "knitr",
-    "languageserver",
+    "languageserver",  # Provides code completion and linting in VS Code.
     "lintr",
     "Rcpp",
     "readr",
@@ -28,4 +28,5 @@ install.packages(c(
     "tidyverse",
     "tinytex",
     "xfun"), lib = ".R/library")
-    devtools::install_github("ManuelHentschel/vscDebugger")
+# Install R debugger for VS Code.
+devtools::install_github("ManuelHentschel/vscDebugger")
