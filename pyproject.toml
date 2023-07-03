@@ -24,7 +24,8 @@ dependencies = [
     "pip-tools", # used to manage requirements.txt.
     "pytest",  # used for testing, not needed for production.
     "radian",  # enhances the experience of using R in VS Code.
-    "ruff"  # for fast linting of python.
+    "ruff",  # for fast linting of python.
+    "OSGridConverter"  # for the demonstration.
 ]
 
 [project.urls]
