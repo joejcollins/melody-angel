@@ -10,7 +10,7 @@ compile:  # Compile the requirements files using pip-tools.
 	. .venv/bin/activate; python -m pip install pip-tools
 	. .venv/bin/activate; python -m piptools compile -o requirements.txt pyproject.toml && echo "-e ." >> requirements.txt
 
-dataset:  # Prepare the datasets for analysis
+datasets:  # Prepare the datasets for analysis
 	. .venv/bin/activate; python ./python_src/make_datasets.py
 
 .PHONY: help
