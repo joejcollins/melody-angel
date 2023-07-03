@@ -20,8 +20,10 @@ dependencies = [
     "black",  # uncompromising Python code formatter.
     "debugpy",  # only required for debugging, not needed for production.
     "flake8",  # linting for Python for VS Code to use.
+    "lxml",  # for parsing GPX files.
     "mypy",  # optional static type checker for Python.
     "pip-tools", # used to manage requirements.txt.
+    "pydantic",  # for validating the raw data.
     "pytest",  # used for testing, not needed for production.
     "radian",  # enhances the experience of using R in VS Code.
     "ruff",  # for fast linting of python.

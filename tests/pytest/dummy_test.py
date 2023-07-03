@@ -1,3 +1,6 @@
+"""Dummy demonstration test."""
+
+
 def test_nothing() -> None:
     """Test that the static settings are correct."""
     # Arrange
