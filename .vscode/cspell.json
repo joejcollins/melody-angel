@@ -6,6 +6,7 @@
         "accesslog",
         "gpxpy",
         "latlon",
+        "latlong",
         "osgridconverter",
         "pydantic"
     ]

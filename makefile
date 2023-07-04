@@ -17,6 +17,9 @@ datasets:  # Prepare the datasets for analysis
 help: # Show help for each of the makefile recipes.
 	@grep -E '^[a-zA-Z0-9 -]+:.*#'  makefile | sort | while read -r l; do printf "\033[1;32m$$(echo $$l | cut -f 1 -d':')\033[00m:$$(echo $$l | cut -f 2- -d'#')\n"; done
 
+mypy:  # Type check the code with mypy.
+	.venv/bin/python -m mypy ./python_src/ ./tests/
+
 report:  # Report the python version and pip list.
 	.venv/bin/python --version
 	.venv/bin/python -m pip list -v

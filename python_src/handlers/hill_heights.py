@@ -13,29 +13,34 @@ def make_hill_heights() -> None:
     # Parse GPX file
     with open(GPX_FILE, "r") as f:
         gpx = gpxpy.parse(f)
-
     # Extract waypoints
-    sample_waypoints = []
-    for waypoint in gpx.waypoints:
-        name = waypoint.name or ""
-        latitude = waypoint.latitude or ""
-        longitude = waypoint.longitude or ""
-        elevation = waypoint.elevation or ""
-        sample_waypoints.append(
-            {
-                "id": name,
-                "latitude": latitude,
-                "longitude": longitude,
-                "elevation": elevation,
-            }
+    sample_points = _get_sample_points(gpx)
+    # Write waypoints to CSV file
+    _write_sample_points_csv(sample_points)
+
+
+def _get_sample_points(gpx: gpxpy.gpx.GPX) -> list[SamplePoint]:
+    """Extract sample points from GPX file."""
+    sample_points = []
+    for gpx_waypoint in gpx.waypoints:
+        name = gpx_waypoint.name or ""
+        latitude = gpx_waypoint.latitude or 0.0
+        longitude = gpx_waypoint.longitude or 0.0
+        elevation = gpx_waypoint.elevation or 0.0
+        sample_point = SamplePoint(
+            name=name, latitude=latitude, longitude=longitude, elevation=elevation
         )
 
-    # Write waypoints to CSV file
+        sample_points.append(sample_point)
+    return sample_points
+
+
+def _write_sample_points_csv(sample_points) -> None:
     with open(CSV_FILE, "w+", newline="") as records_file:
         record_writer = csv.DictWriter(
             records_file,
             fieldnames=[
-                "id",
+                "name",
                 "latitude",
                 "longitude",
                 "elevation",
@@ -44,6 +49,5 @@ def make_hill_heights() -> None:
             ],
         )
         record_writer.writeheader()
-        for sample_waypoint in sample_waypoints:
-            sample_point = SamplePoint(**sample_waypoint)
+        for sample_point in sample_points:
             record_writer.writerow(sample_point.dict())
