@@ -1,28 +1,25 @@
-# Investigate the hill heights
+---
+title: "My Map Document"
+author: "Your Name"
+---
 
+Load the data.
+
+
+```{r}
 library(readr)
-hill_heights <- read_csv("data/processed/hill_heights.csv")
+library(here)
+
+# Set the directory path relative to the Quarto document
+data_path <- here::here("data", "processed", "hill_heights.csv")
+
+hill_heights <- read_csv(data_path, show_col_types = FALSE)
+```
 
 
-plot(x = hill_heights$longitude, y = hill_heights$latitude, type = "l", col = "black", lwd = 3,
-     xlab = "Longitude", ylab = "Latitude")
+Plot the two points.
 
-library(leaflet)
-
-# Create a leaflet map
-m <- leaflet()
-
-# Add map tiles
-m <- addProviderTiles(m, "OpenStreetMap.Mapnik")
-
-# Add markers for each point
-for (i in 1:nrow(hill_heights)) {
-  m <- addMarkers(m, lng = hill_heights$longitude[i], lat = hill_heights$latitude[i])
-}
-
-# Display the map
-m
-
+```{r}
 # Load required libraries
 library(plotly)
 
@@ -37,8 +34,7 @@ center_lon <- mean(hill_heights$longitude)
 plot <- plot_ly(hill_heights, type = "scattermapbox", mode = "markers") %>%
   add_trace(
     lat = ~latitude,
-    lon = ~longitude,
-    text = ~name
+    lon = ~longitude
   ) %>%
   layout(
     mapbox = list(
@@ -52,4 +48,4 @@ plot <- plot_ly(hill_heights, type = "scattermapbox", mode = "markers") %>%
 
 # Display the plot
 plot
-
+```

@@ -1,0 +1,12 @@
+---
+title: "My Map Document"
+author: "Your Name"
+---
+
+Load the data.
+
+
+```{r}
+library(readr)
+hill_heights <- read_csv("../data/processed/hill_heights.csv", show_col_types = FALSE)
+```
