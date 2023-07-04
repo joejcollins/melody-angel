@@ -18,3 +18,17 @@ The process takes about 10 minutes in total.
 7. Open a terminal and enter the command `rserver`.  Thi should open R studio in a browser window.
 8. In Rstudio got to File > Open Project... and open the project file `melody-angel.Rproj`.
 9. Do R stuff.
+
+## Known Issues
+
+Upon using the "plot" function in RStudio, this error may appear:
+
+```
+Warning message:
+In grSoftVersion() :
+  unable to load shared object '/usr/local/lib/R/modules//R_X11.so':
+  libXt.so.6: cannot open shared object file: No such file or directory
+```
+
+This is harmless and the plot function still works.
+The error is caused by the way the container was built.

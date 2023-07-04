@@ -1,3 +1,4 @@
+# Use the latest rocker image https://rocker-project.org/
 FROM rocker/rstudio:latest
 
 # Also install python and Cairo (which is used by the ‘httpgd’ R package).
