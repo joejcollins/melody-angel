@@ -10,5 +10,6 @@ output:
 Draw a graph.
 
 ```{r}
-curve(x^2+5)
+graph <- curve(x^2+5)
+graph
 ```
