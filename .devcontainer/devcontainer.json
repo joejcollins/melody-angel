@@ -18,7 +18,7 @@
 	],
 
     // Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": ". ./.devcontainer/post-create.sh  > ../post-create-log.txt",
+    "postCreateCommand": ". ./.devcontainer/post-create.sh  > ../post-create-log.txt 2>&1",
     // Use 'postStartCommand' to run commands each time the container is started.
     "postStartCommand": ". ./.devcontainer/post-start.sh  > ../post-start-log.txt",
 
