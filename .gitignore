@@ -455,3 +455,4 @@ po/*~
 *.html
 *.pdf
 reports/**/
+!reports/images/
