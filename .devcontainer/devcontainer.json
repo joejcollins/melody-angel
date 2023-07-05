@@ -20,7 +20,7 @@
     // Use 'postCreateCommand' to run commands after the container is created.
     "postCreateCommand": ". ./.devcontainer/post-create.sh  > ../post-create-log.txt",
     // Ensure that redis is running
-    "postStartCommand": ". ./.devcontainer/post-start.sh",
+    "postStartCommand": ". ./.devcontainer/post-start.sh > ../post-start-log.txt",
 
 	// Configure tool-specific properties.
     "customizations": {
