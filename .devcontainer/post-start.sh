@@ -1,4 +1,3 @@
-sudo useradd codespace
 sudo bash -c "echo R_LIBS_USER=/workspaces/melody-angel/.R/library > /home/codespace/.Renviron"
 ln -s /workspace/melody-angel /home/codespace/melody-angel
 # https://stackoverflow.com/questions/47541007/how-to-i-bypass-the-login-page-on-rstudio
