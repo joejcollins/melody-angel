@@ -13,7 +13,9 @@ install.packages(c(
     "jsonlite",
     "knitr",
     "languageserver",  # Provides code completion and linting in VS Code.
+    "leaflet",
     "lintr",
+    "plotly",
     "Rcpp",
     "readr",
     "magrittr",
