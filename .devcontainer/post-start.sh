@@ -1,4 +1,4 @@
-sudo bash -c "echo R_LIBS_USER=/workspace/melody-angel/.R/library > /home/rstudio/.Renviron"
+sudo bash -c "echo R_LIBS_USER=/workspaces/melody-angel/.R/library > /home/rstudio/.Renviron"
 # ln -s /workspace/melody-angel /home/rstudio/melody-angel
 # https://stackoverflow.com/questions/47541007/how-to-i-bypass-the-login-page-on-rstudio
 sudo usermod -a -G sudo rstudio

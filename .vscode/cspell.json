@@ -4,10 +4,12 @@
     "words": [
         "abcdefghijklmnopqrstuvwxyz",
         "accesslog",
+        "devcontainer",
         "gpxpy",
         "latlon",
         "latlong",
         "osgridconverter",
-        "pydantic"
+        "pydantic",
+        "rstudio"
     ]
 }
