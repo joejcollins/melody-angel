@@ -5,6 +5,3 @@ FROM rocker/rstudio:4.3.1
 RUN sudo apt -q update \
  && sudo apt install --assume-yes python3.10-venv \
  && sudo apt install --assume-yes libcairo2-dev
-
-# Add a codespace user for running in Codespaces
-RUN sudo useradd codespace
