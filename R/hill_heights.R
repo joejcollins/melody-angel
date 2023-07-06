@@ -52,4 +52,3 @@ plot <- plot_ly(hill_heights, type = "scattermapbox", mode = "markers") %>%
 
 # Display the plot
 plot
-
