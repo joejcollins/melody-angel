@@ -22,7 +22,7 @@ crap <- crap[-1,]
 
 crap <- tibble::rownames_to_column(crap, "Age")
 
-ggplot(data=crap, aes(x=Age, y=Crownhill, group=1)) +
+ggplot(data=crap, aes(x=factor(Age, Age), y=Crownhill, group=1)) +
   geom_line() +
   geom_point()
 
