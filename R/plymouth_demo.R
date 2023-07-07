@@ -29,13 +29,17 @@ for (i in colnames(crap)){
   }
 }
 
-ggplot(data = crap, aes(x= Age, y = Crownhill, group = 1)) +
+ggplot(data = crap, aes(x = factor(Age, Age), y = Crownhill, group = 1)) +
   geom_line() +
   geom_point()
 
 # Reshape the data into a longer format
 crap_long <- crap %>%
   pivot_longer(cols = -Age, names_to = "Location", values_to = "Value")
+
+age_order <- c("Age0-4", "Age5-11", "Age12-17", "Age18-59", "Age60-100")
+
+crap_long$Age <- factor(crap_long$Age, levels = age_order)
 
 # Plot the line plot
 ggplot(data = crap_long, aes(x = Age, y = Value, group = Location, color = Location)) +
