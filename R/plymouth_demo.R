@@ -31,7 +31,8 @@ for (i in colnames(crap)){
 
 ggplot(data = crap, aes(x = factor(Age, Age), y = Crownhill, group = 1)) +
   geom_line() +
-  geom_point()
+  geom_point() +
+  labs(x = "Age", y = "Number of Active Users")
 
 # Reshape the data into a longer format
 crap_long <- crap %>%
@@ -44,7 +45,8 @@ crap_long$Age <- factor(crap_long$Age, levels = age_order)
 # Plot the line plot
 ggplot(data = crap_long, aes(x = Age, y = Value, group = Location, color = Location)) +
   geom_line() +
-  geom_point()
+  geom_point() +
+  labs(x = "Age", y = "Number of Active Users")
 
   
 
