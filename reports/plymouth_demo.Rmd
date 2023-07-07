@@ -1,0 +1,72 @@
+---
+title: "Plymouth libraries dataset demonstration"
+author: "Jared Forte"
+output: pdf_document
+---
+
+```{r}
+library(readr)
+library(ggplot2)
+library(tibble)
+library(dplyr)
+library(tidyverse)
+
+plymouth <- read_csv("~/melody-angel/data/raw/plymouth.csv")
+```
+
+`We import the libraries required for setting up and displaying the data/graphs. Note the library() method of importing`
+
+```{r}
+transpose_df <- function(df) {
+  t_df <- data.table::transpose(df)
+  colnames(t_df) <- rownames(df)
+  rownames(t_df) <- colnames(df)
+  tibble::as_tibble(t_df)
+  return(t_df)
+}
+
+crap <- transpose_df(plymouth)
+```
+
+`I then declare a function to transpose a dataset ready for the graph I want to make. I then run this function and assign the value to the crap dataset.`
+
+```{r}
+colnames(crap) <- plymouth$Library
+crap <- crap[-1,]
+
+crap <- tibble::rownames_to_column(crap, "Age")
+
+for (i in colnames(crap)){
+  if(i != "Age"){
+    crap[, i] <- as.numeric(crap[, i])
+  }
+}
+```
+
+`Here I am preparing the dataset further so that I can get ready to plot the line graph that is required. This includes changing the datatypes to numeric so that they are displayed correctly in the view.`
+
+```{r}
+ggplot(data = crap, aes(x = factor(Age, Age), y = Crownhill, group = 1)) +
+  geom_line() +
+  geom_point()
+```
+  
+`This creates an example line graph for the Crownhill data`
+
+```{r}
+crap_long <- crap %>%
+  pivot_longer(cols = -Age, names_to = "Location", values_to = "Value")
+
+age_order <- c("Age0-4", "Age5-11", "Age12-17", "Age18-59", "Age60-100")
+
+crap_long$Age <- factor(crap_long$Age, levels = age_order)
+
+ggplot(data = crap_long, aes(x = Age, y = Value, group = Location, color = Location)) +
+  geom_line() +
+  geom_point()
+```
+
+`I then create another dataset from the data and create a table showing all libraries.`
+  
+
+
